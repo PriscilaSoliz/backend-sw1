@@ -2,7 +2,6 @@ const express = require('express');
 const http = require('http');
 const cors = require('cors');
 const { Server } = require('socket.io');
-const PORT = process.env.PORT || 3000;
 
 // 🔵 Inicializar express
 const app = express();
@@ -50,6 +49,6 @@ io.on('connection', (socket) => {
 });
 
 // 🔵 Levantar servidor
-server.listen(PORT, () => {
-    console.log('Servidor corriendo en puerto', PORT);
+server.listen(process.env.PORT, () => {
+    console.log('Servidor corriendo en puerto', process.env.PORT);
 });
