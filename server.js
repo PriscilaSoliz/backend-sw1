@@ -49,6 +49,6 @@ io.on('connection', (socket) => {
 });
 
 // 🔵 Levantar servidor
-server.listen(3000, () => {
-    console.log('Servidor corriendo en puerto 3000');
+server.listen(process.env.PORT, () => {
+    console.log('Servidor corriendo en puerto', process.env.PORT);
 });
